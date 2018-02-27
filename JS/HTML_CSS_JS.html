@@ -1,0 +1,359 @@
+<!DOCTYPE HTML>
+<HTML>
+
+<HEAD>
+<TITLE>HTML5+CSS</TITLE>
+<link href="css_sheet.css" rel="stylesheet" />
+</HEAD>
+
+<BODY>
+<p id=debug>
+
+</p>
+<HEADER>
+<H1 id=inicio>La primera con HTML5 y CSS</h1>
+</HEADER><hr/>
+
+<NAV>
+<ul><big>
+<li class=nav-ul><a href = http://www.google.com target=_blank>Google</a></li>
+<li class=nav-ul><a href = http://www.duolingo.com target=_blank>Duolingo</a></li>
+<li class=nav-ul><a href = http://www.youtube.com target=_blank>Youtube</a></li>
+</big></ul>
+</NAV><br/>
+
+<section id=index>
+<h1 class="navi">Indice de Contenido</h1>
+<ol>
+<li><a href=#article1>Articulo 1</a></li>
+<li><a href=#article2>Articulo 2</a></li>
+<li><a href=#article3>Articulo 3</a></li>
+<li><a href=#multimedia>Multimedia</a>
+    <ol>
+    <li><a href=#audio>Audio</a></li>
+    <li><a href=#video>Video</a></li>
+    </ol>
+</li>
+<li><a href=#drawing>SVG Drawing</a>
+    <ol>
+    <li><a href=#circle>Circle</a></li>
+    <li><a href=#rect>Rectangle</a></li>
+    </ol>
+</li>
+<li><a href=#styling>Styling Lists</a></li>
+<li><a href=#tables>Styling Tables</a></li>
+    <ol>
+        <li><a href=#tables1>Table Properties</a></li>
+        <li><a href=#tables2>Caption-side Property</a></li>
+    </ol>
+<li><a href=#links>Styling Links</a></li>
+<li><a href=#floating>Floating</a></li>
+<li><a href=#radial>Radial Gradient</a></li>
+</ol>
+</section><br/>
+
+
+<ARTICLE id=article1>
+<br><H1>1. Articulo 1</H1>
+<p class = ident>This is an example article of <span><b>text-ident</b></span> property. First line of out text is idented
+to the right in 60px. Besides pixels you can also other measurement units, like pt, cm, em, etc. </p><br>
+</ARTICLE><br>
+
+<ARTICLE id=article2><br/>
+<H1>2. Articulo 2</H1>
+<SECTION>
+<H2>Heading of a section</H2>
+<img src=download.jpg height=200px width=200px border = 2px bordercolor = blue />
+<img src=my.svg width=200px alt="">
+<figcaption id=fig_cap>Figure caption goes here</figcaption>
+<p>Otro enorme parrafo</p><br>
+</SECTION>
+</ARTICLE></br>
+
+<ARTICLE id=article3>
+<br><H1>3. Articulo 3</H1>
+<ASIDE>
+<H1>Aside</H1>
+<p>This website will be the best place for choosing gifts.</p>
+<p>Gifts will be delivered to you within 24 hours.</p>
+</ASIDE><br>
+</ARTICLE><br>
+
+<ARTICLE id=multimedia>
+<br><H1>4. Multimedia</H1>
+<p>Archivos multimedia como audio o video.</p>
+<SECTION id=audio>
+<H2 name=audio>1. Audio</H2>
+<p>Aqui viene un audio.</p>
+<AUDIO controls loop> <!--autoplay=autoplay para mostrar tocar al inicio-->
+<SOURCE src = audio.mp3 type=audio/mpeg>
+No se puede mostrar.
+</AUDIO>
+</SECTION>
+            
+<SECTION id=video >
+<H2>2. Video</H2>
+<p>Aqui viene un video.</p>
+<VIDEO width=400 height=220 controls>
+<SOURCE src = video.mp4 type=video/mp4>
+No se puede mostrar.
+</VIDEO>
+</SECTION>
+<br>
+</ARTICLE><br>
+        
+<article id=drawing>
+<br><h1>5. SVG Drawing</h1>
+<p>
+To draw shapes with SVG, you first need to create an SVG element tag with two attributes:width and height.<br/>
+<pre class=svg>
+    &lt;svg
+        width=1000 height=1000&gt;
+    &lt;/svg&gt;
+</pre>
+</p>
+
+<h2 id=circle>1. Circle</h2>
+<p>
+To create a circle, add a <span><b>&lt;circle&gt;</b></span> tag:
+<div class=circle>
+    &lt;svg width=2000 height=2000&gt;
+        &lt;circle cx=80 cy=80 r=50 fill=#00FF00 style="stroke:blue;stroke-width:3"/&gt;
+    &lt;/svg&gt;
+</div>
+</p>
+            
+<h3>Result</h3>
+<svg width=1100 height=220>
+<circle cx=110 cy=110 r=100 fill=#00FF00 style="stroke:blue;stroke-width:3"/>
+</svg>
+            
+<h2 id=rect>2. Rectangle</h2>
+<p>
+<span><b>&lt;rect&gt;</b></span> defines a rectangle:
+<pre class=rect>
+    &lt;svg width=2000 height=2000&gt;
+        &lt;rect width=300 height=100 x=20 y=20 fill=green style="stroke:#FF0000; stroke-width:3"/&gt;
+    &lt;/svg&gt;
+</pre>
+</p>
+            
+<h3>Result</h3>
+<svg width=1100 height=150>
+<rect width=220 height=110 x=20 y=5 fill=#00FF00 style="stroke:#FF0000;stroke-width:3"/>
+</svg>
+</article><br>
+        
+<article id=styling>
+<br><h1>6. Styling Lists</h1>
+<p>The CSS list properties allow us to set different list item markers.
+In HTML, there are two types of list: <br><br>
+<b>unordered lists</b> (&lt;ul&gt;) - the list itemes are marked with bullets. <br>
+<b>ordered lists</b> (&lt;ol&gt;) - the list items are marked with numbers or letters. <br><br>
+With CSS, lists can be styled further, and images can be used as the list item marker.
+One of the ways is to use the <b>list-style-type </b> property, which can be set to
+<b>circle, square, decimal, disc, lower-alpha</b>, etc.
+</p>
+
+<p><b>The HTML:</b></p>
+
+<div class=code>
+<span class=tag>&lt;ol</span><span class=command> class</span>=<span class=type>"lower-alpha"</span><span class=tag>&gt</span>
+    <span class=tag>&lt;li&gt</span>Red<span class=tag>&lt;/li&gt</span>
+    <span class=tag>&lt;li&gt</span>Green<span class=tag>&lt;/li&gt</span>
+    <span class=tag>&lt;li&gt</span>Blue<span class=tag>&lt;/li&gt</span>
+<span class=tag>&lt;ol&gt</span>
+<span class=tag>&lt;ul</span><span class=command> class</span>=<span class=type>"circle_list"</span><span class=tag>&gt</span>
+    <span class=tag>&lt;li&gt</span>Red<span class=tag>&lt;/li&gt</span>
+    <span class=tag>&lt;li&gt</span>Green<span class=tag>&lt;/li&gt</span>
+    <span class=tag>&lt;li&gt</span>Blue<span class=tag>&lt;/li&gt</span>
+<span class=tag>&lt;ul&gt</span>
+<span class=tag>&lt;ul</span><span class=command> class</span>=<span class=type>"square"</span><span class=tag>&gt</span>
+    <span class=tag>&lt;li&gt</span>Red<span class=tag>&lt;/li&gt</span>
+    <span class=tag>&lt;li&gt</span>Green<span class=tag>&lt;/li&gt</span>
+    <span class=tag>&lt;li&gt</span>Blue<span class=tag>&lt;/li&gt</span>
+<span class=tag>&lt;ul&gt</span>
+</div>
+
+<p><b>The CSS:</b></p>
+<div class=code1>
+ol.lower-alpha {
+    <span class=css_type>list-style-type:</span><b> lower-alpha;</b>
+}
+ul.circle_list {
+    <span class=css_type>list-style-type:</span><b> circle;</b>
+}
+ul.square {
+    <span class=css_type>list-style-type:</span><b> square;</b>
+}
+</div>
+
+<h3><b>Result:</b></h3>
+<ol class="lower-alpha">
+    <li>Red</li>
+    <li>Green</li>
+    <li>Blue</li>
+</ol>
+
+<ul class="circle-list">
+    <li>Red</li>
+    <li>Green</li>
+    <li>Blue</li>
+</ul>
+
+<ul class="square">
+    <li>Red</li>
+    <li>Green</li>
+    <li>Blue</li>
+</ul>
+
+<p>The following list has list-style-position:<b> outside</b>.</p>
+<ul class=ul-image>
+    <li>Red</li>
+    <li>Green</li>
+    <li>Blue</li>
+</ul><br>
+</article><br>
+
+<article id=tables>
+<br><h1>7. Styling Tables</h1>
+<h2 id=tables1>1. Table Properties</h2>
+<p>The look of an HTML table can be greatly improved with CSS.</p>
+<p>The <b>border-collapse </b>property specifies whether
+the table borders are collapsed into a single border or separated as default.
+If the borders are separated, the <span><b>border-spacing </b></span>property
+can be used to change the spacing.</p>
+
+<table class=table border=1>
+    <tr>
+        <td>Red</td>
+        <td>Green</td>
+    </tr>
+    <tr>
+        <td>Blue</td>
+        <td>Yellow</td>
+    </tr>
+</table><br>
+
+<h2 id=tables2>2. Caption-side Property</h2>
+<p>The <b>caption-side</b> property specifies the position of a table caption. The values can be set as top or bottom. <br>
+In the example below, we specify the placement of a table caption on <b>top</b>.</p>
+
+<table class=table1 border=1>
+    <caption>Some of our courses</caption>
+    <tr>
+        <th>Course Name</th>
+        <th>Lessons</th>
+        <th>Quizzes</th>
+    </tr>
+    <tr>
+        <td>C++</td>
+        <td>81</td>
+        <td>363</td>
+    </tr>
+    <tr>
+        <td>Javascript</td>
+        <td>48</td>
+        <td>144</td>
+    </tr>
+    <tr>
+        <td>HTML</td>
+        <td>38</td>
+        <td>119</td>
+    </tr>
+    <tr>
+        <td>CSS</td>
+        <td>70</td>
+        <td>174</td>
+    </tr>
+</table><br>
+</article><br>
+
+<article>
+<br><h1 id=links>8. Styling Links</h1>
+<p>
+<div class=info>
+<ul>
+    <li>
+        When setting the style for several link states, there are some order rules:<br>
+        - a:hover MUST come after a:link and a:visited<br>
+        - a:active MUST come after a:hover
+    </li>
+</ul>
+</div>
+Links can be styled with any CSS property (e.g., color, font-family, background, etc.).<br>
+In addition, linnks can be styled differently, depending on what state they are in. The following pseudo selectors are
+available.<br>
+<b>a:link</b> - defines the style for normal unvisited links <br>
+<b>a:visited</b> - defines the style for visited links <br>
+<b>a:active</b> - a link becomes active ones you click on it <br>
+<b>a:hover</b> - a link is hovered when the mouse is over it </p>
+<p>
+The example below creates a link that will change the style when the mouse is moved over it.<br>
+</p>
+
+<p><a class=link_hovered href=http://facebook.com target=_blank>
+    This link is hovered when we mouse over it.
+</a></p><br>
+
+</article><br>
+
+<div class=up>
+<a href=#inicio>
+    <img src=up.png height=30px width=30px/>
+</a>
+</div>
+
+<article>
+<br><h1 id=floating>9. Floating</h1>
+<p><img class=fl src=banner.jpg /> This paragraph has an image that is floated to the <b>right</b>.
+It is highly recomended to add a margin to images so that the text does not  get too close to the image.
+If you want your text to be easily read, you should always add a few pixels between words and borders,
+images and other content.
+</p><br>
+</article><br>
+
+<article>
+<br><h1 id=radial>10. Radial Gradient</h1>
+<div class=radial1>
+</div><br>
+</article><br>
+
+<article>
+<br><h1 id=transition>11. Transitions</h1>
+<div class=trans1></div><br>
+</article><br>
+
+<article>
+<br><h1 id=transformation>12. Transformation</h1>
+<br><h2 id=transf2>2. Transform origin</h2>
+<div class=empty-div>
+<div class=green-div></div>
+</div><br>
+
+<h2>3. The tranlate() method</h2>
+<div class=translate></div><br>
+
+<h2>3. The skew() method</h2>
+<div class=skew></div><br>
+</article><br>
+
+<article>
+<br><h1>Keyframe and Animation</h1>
+<div class=animation>
+</div><br>
+
+<div class=animation1>
+</div><br>
+</article>
+
+<!-- </section> Fin de WholeSection-->
+
+<FOOTER>
+<HR/>
+<p>Copyright</p>
+</FOOTER>
+<script src=script.js>
+</script>
+</BODY>
+</HTML>

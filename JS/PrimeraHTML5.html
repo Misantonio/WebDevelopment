@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+<HTML>
+    <HEAD>
+        <TITLE>Primera HTML5</TITLE>
+    </HEAD>
+    <BODY bgcolor = #40FFA8>
+        <HEADER>
+            <H1 align = center><font color = #0033FF>La primera con HTML5</font></h1>
+        </HEADER>
+        <NAV style="text-align: center;background: #00FF22; border: dotted; border-color: #0000FF;">
+            <ul><big>
+                <li style = "display:inline; padding-right: 5px;"><a href = http://www.google.com target=_blank>Google</a></li>
+                <li style = "display:inline; padding-right: 5px; padding-left:5px;"><a href = http://www.duolingo.com target=_blank>Duolingo</a></li>
+                <li style = "display:inline; padding-right: 5px; padding-left:5px;"><a href = http://www.youtube.com target=_blank>Youtube</a></li>
+            </big></ul>
+        </NAV>
+        <ARTICLE>
+            <H1>Articulo 1</H1>
+            <p>Aqui va todo el choro del primer articulo</p>
+        </ARTICLE>
+        <ARTICLE><br/>
+            <H1>Articulo 2</H1>
+            <SECTION>
+                <H1>Heading of a section</H1>
+                <img src=download.jpg height=200px width=200px border = 2px bordercolor = blue />
+                <img src=my.svg width=200px alt="">
+                <figcaption>Figure caption goes here</figcaption>
+                <p>Otro enorme parrafo</p>
+            </SECTION>
+        </ARTICLE></br>
+        <ARTICLE>
+            <H1 align = left>Articulo 3</H1>
+            <ASIDE>
+                <H1>Aside</H1>
+                <p>This website will be the best place for choosing gifts.</p>
+                <p>Gifts will be delivered to you within 24 hours.</p>
+            </ASIDE>
+        </ARTICLE>
+        <ARTICLE><br/>
+            <H1>Multimedia</H1>
+            <p>Archivos multimedia como audio o video.</p>
+            <SECTION>
+                <H1>Audio</H1>
+                <p>Aqui viene un audio.</p>
+                <AUDIO controls loop> <!--autoplay=autoplay para mostrar tocar al inicio-->
+                    <SOURCE src = audio.mp3 type=audio/mpeg>
+                    No se puede mostrar.
+                </AUDIO>
+            </SECTION>
+            <SECTION>
+                <H1>Video</H1>
+                <p>Aqui viene un video.</p>
+                <VIDEO width=400 height=220 controls>
+                    <SOURCE src = video.mp4 type=video/mp4>
+                    No se puede mostrar.
+                </VIDEO>
+            </SECTION>      
+        </ARTICLE><br/>
+        <article>
+            <h1>SVG Drawing</h1>
+            <p>
+            To draw shapes with SVG, you first need to create an SVG element tag with two attributes:width and height.<br/>
+                <pre>&lt;svg width=1000 height=1000&gt;&lt;/svg&gt;</pre>
+            </p>
+                <h2>Circle</h2>
+                <p>
+                To create a circle, add a <span style="color:blue;"><b>&lt;circle&gt;</b></span> tag:
+                    <pre style="background-color: #B3FFFF; color: blue; padding-right: 30px; margin-right: 720px;">
+    &lt;svg width=2000 height=2000&gt;
+        &lt;circle cx=80 cy=80 r=50 fill=#00FF00 style="stroke:blue;stroke-width:3"/&gt;
+    &lt;/svg&gt;    </pre>
+                </p>
+                <h3>Result</h3>
+                <svg width=1100 height=220>
+                    <circle cx=110 cy=110 r=100 fill=#00FF00 style="stroke:blue;stroke-width:3"/>
+                </svg>
+            <h2>Rectangle</h2>
+            <p>
+            <span style = "color:blue"><b>&lt;rect&gt;</b></span> defines a rectangle:
+                <pre style="background-color: #B3FFFF; color: blue; padding-right: 30px; margin-right: 620px;">
+    &lt;svg width=2000 height=2000&gt;
+        &lt;rect width=300 height=100 x=20 y=20 fill=green style="stroke:#FF0000; stroke-width:3"/&gt;
+    &lt;/svg&gt;</pre>
+            </p>
+            <h3>Result</h3>
+            <svg width=1100 height=220>
+                <rect width=220 height=110 x=20 y=5 fill=#00FF00 style="stroke:#FF0000;stroke-width:3"/>
+            </svg>
+        </article>
+        </SECTION>
+        <FOOTER>
+            <HR/>
+            <p align = center><i>Copyright</i></p>
+        </FOOTER>
+    </BODY>
+</HTML>
